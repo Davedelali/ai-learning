@@ -1,0 +1,67 @@
+.feature-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+
+    /* Fade-in and Slide-up animation */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards ease-out;
+}
+
+.feature-card:nth-child(2) {
+    animation-delay: 0.2s; /* Add delay to the second card */
+}
+
+.feature-card:nth-child(3) {
+    animation-delay: 0.4s; /* Add delay to the third card */
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.03); /* Add bounce effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #4facfe;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.feature-description {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Fade-in and Slide-up Keyframes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bounce Animation for Icons */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
